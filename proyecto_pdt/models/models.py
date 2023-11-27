@@ -63,6 +63,7 @@ class Task_Proyecto_PDT(models.Model):
     pdt_categoria = fields.Char(string='PDT - Categoría')
     pdt_orden = fields.Integer(string="Control - Secuencia",default=1)
     m_madurez_id = fields.Many2one(string='Modelo de Madurez',related="pdt_id.m_madurez_id", store=True)
+    fecha_diagnostico = fields.Datetime('Fecha de diagnóstico', default=fields.Datetime.now())
 
 
     #DIAGNOSTICO******************************************************************************
